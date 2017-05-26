@@ -45,6 +45,10 @@ gulp.task('git-check', function(done) {
       '\n  Download git here:', gutil.colors.cyan('http://git-scm.com/downloads') + '.',
       '\n  Once git is installed, run \'' + gutil.colors.cyan('gulp install') + '\' again.'
     );
+
+    gulp.task('default',function() {
+    gulp.watch('sass/**/*.scss',['styles']);
+});
     process.exit(1);
   }
   done();

@@ -23,6 +23,7 @@ angular.module('starter', ['ionic', 'ngCordova'])
   });
 })
 
+
 .config(function($stateProvider, $urlRouterProvider) {
  
   $stateProvider
@@ -35,7 +36,6 @@ angular.module('starter', ['ionic', 'ngCordova'])
   $urlRouterProvider.otherwise("/");
  
 })
-
 .controller('MapCtrl', function($scope, $state, $cordovaGeolocation) {
  var options = {timeout: 10000, enableHighAccuracy: true};
  
@@ -54,4 +54,6 @@ angular.module('starter', ['ionic', 'ngCordova'])
   }, function(error){
     console.log("Could not get location");
   });
+
+
 });
