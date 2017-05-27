@@ -27,6 +27,14 @@ angular.module('starter', ['ionic', 'ngCordova'])
 .config(function($stateProvider, $urlRouterProvider) {
  
   $stateProvider
+
+  .state('landing', {
+    url: '/',
+    templateUrl: 'templates/landing.html',
+    controller: 'LandCtrl'
+  })
+
+
   .state('map', {
     url: '/',
     templateUrl: 'templates/map.html',
