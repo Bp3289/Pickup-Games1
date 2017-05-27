@@ -48,8 +48,17 @@ angular.module('starter', ['ionic', 'ngCordova'])
       zoom: 15,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
+  $scope.map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    //Wait until the map is loaded
+  google.maps.event.addListenerOnce($scope.map, 'idle', function(){
  
-    $scope.map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    var marker = new google.maps.Marker({
+      map: $scope.map,
+      animation: google.maps.Animation.DROP,
+      position: latLng
+  });      
+ 
+});
  
   }, function(error){
     console.log("Could not get location");
@@ -57,3 +66,5 @@ angular.module('starter', ['ionic', 'ngCordova'])
 
 
 });
+
+
