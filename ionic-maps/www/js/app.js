@@ -36,7 +36,7 @@ angular.module('starter', ['ionic', 'ngCordova'])
 
 
   .state('map', {
-    url: '/',
+    url: '/map',
     templateUrl: 'templates/map.html',
     controller: 'MapCtrl'
   });
@@ -44,6 +44,11 @@ angular.module('starter', ['ionic', 'ngCordova'])
   $urlRouterProvider.otherwise("/");
  
 })
+
+.controller('LandCtrl', function($scope, $state){
+
+})
+
 .controller('MapCtrl', function($scope, $state, $cordovaGeolocation) {
  var options = {timeout: 10000, enableHighAccuracy: true};
  
