@@ -1,9 +1,29 @@
 <ion-view>
   <ion-content>
-  <body id="luke">
-    <div>
-     <h1 id="molly">Hey I'm the landing page</h1>
-    </div>
-    </body>
+  <!DOCTYPE html>
+  <html>
+  <head>
+  	<meta charset="utf-8">
+  	<script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+  	<link rel="stylesheet" type="text/css" href="./css/style.css">
+  </head>
+  <body>
+
+  	<div class="container">
+  		<input id="txtEmail" type="email" placeholder="Email">
+
+  		<input id="txtPassword" type="password" placeholder="Password">
+
+  		<button id="btnLogin" class="btn btn-action">Log In</button>
+
+  		<button id="btnSignUp" class="btn btn-secondary">Sign Up</button>
+
+  		<button id="btnLogout" class="btn btn-action hide">Log out</button>
+  
+  	</div>
+
+  	<script src="js/controllers.js"></script>
+  </body>
+  </html>
    </ion-content>
   </ion-view>
