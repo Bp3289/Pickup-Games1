@@ -31,14 +31,14 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 	height: 80%;
 }
 
-#molly {
+h1 {
+	color: red;
+}
+
+.container {
 	text-align: center;
 }
 
-#landing {
-	background-color: black;
-}
-
-#luke {
-	background-color: black;
+#txtEmail, #txtPassword {
+	margin: 0 auto;
 }
