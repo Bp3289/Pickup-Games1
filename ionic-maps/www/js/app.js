@@ -55,6 +55,8 @@ angular.module('starter', ['ionic', 'firebase', 'ngCordova'])
 
 .controller('MapCtrl', function($scope, $state, $cordovaGeolocation) {
  var options = {timeout: 10000, enableHighAccuracy: true};
+
+ var brands = [];
  
   $cordovaGeolocation.getCurrentPosition(options).then(function(position){
  
@@ -67,6 +69,16 @@ angular.module('starter', ['ionic', 'firebase', 'ngCordova'])
     };
   $scope.map = new google.maps.Map(document.getElementById("map"), mapOptions);
     //Wait until the map is loaded
+    $scope.map.addListener('click', function(event) {  
+    addMarker(event.latLng);  
+  }); 
+  function addMarker(location) {  
+  var brand = new google.maps.Marker({  
+    position: location,  
+    map: $scope.map  
+  });  
+  brands.push(brand);  
+}   
   google.maps.event.addListenerOnce($scope.map, 'idle', function(){
  
     var marker = new google.maps.Marker({
@@ -174,6 +186,8 @@ angular.module('starter', ['ionic', 'firebase', 'ngCordova'])
     footballWindow.open($scope.map, football);
   }); 
 });
+
+
  
   }, function(error){
     console.log("Could not get location");
