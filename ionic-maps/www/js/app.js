@@ -115,6 +115,32 @@ angular.module('starter', ['ionic', 'firebase', 'ngCordova'])
                   '</div>'
   });
 
+  var baseballWindow = new google.maps.InfoWindow({
+      content: '<div id="iw-container">' +
+                    '<div class="iw-title">Baseball</div>' +
+                    '<div class="iw-content">' +
+                      '<div class="iw-subTitle">4pm-7pm</div>' +
+                      '<div class="iw-id">Billy Wade</div>' +
+                      '<p>Looking to get a 7 on 7 game going, tackle only, non of that two hand touch crap!</p>' +
+                      '<div class="iw-subTitle">Contacts</div>' +
+                       '<div class="iw-contact">376-908-9071</div>' +
+                    '<div class="iw-bottom-gradient"></div>' +
+                  '</div>'
+  });
+
+  var volleyWindow = new google.maps.InfoWindow({
+      content: '<div id="iw-container">' +
+                    '<div class="iw-title">Volleyball</div>' +
+                    '<div class="iw-content">' +
+                      '<div class="iw-subTitle">4pm-7pm</div>' +
+                      '<div class="iw-id">Billy Wade</div>' +
+                      '<p>Looking to get a 7 on 7 game going, tackle only, non of that two hand touch crap!</p>' +
+                      '<div class="iw-subTitle">Contacts</div>' +
+                       '<div class="iw-contact">376-908-9071</div>' +
+                    '<div class="iw-bottom-gradient"></div>' +
+                  '</div>'
+  });
+
   var footballWindow = new google.maps.InfoWindow({
       content: '<div id="iw-container">' +
                     '<div class="iw-title">Football</div>' +
@@ -132,13 +158,21 @@ angular.module('starter', ['ionic', 'firebase', 'ngCordova'])
       infoWindow.open($scope.map, marker, basketball, baseball, volleyball);
   }); 
 
-  google.maps.event.addListener(football, 'click', function(){
-    footballWindow.open($scope.map, football);
-  });   
- 
   google.maps.event.addListener(basketball, 'click', function(){
     basketballWindow.open($scope.map, basketball);
   });
+
+  google.maps.event.addListener(baseball, 'click', function(){
+    baseballWindow.open($scope.map, baseball);
+  });   
+ 
+  google.maps.event.addListener(volleyball, 'click', function(){
+    volleyWindow.open($scope.map, volleyball);
+  });
+
+  google.maps.event.addListener(football, 'click', function(){
+    footballWindow.open($scope.map, football);
+  }); 
 });
  
   }, function(error){
