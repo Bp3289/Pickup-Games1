@@ -56,7 +56,7 @@ angular.module('starter', ['ionic', 'firebase', 'ngCordova'])
 .controller('MapCtrl', function($scope, $state, $cordovaGeolocation) {
  var options = {timeout: 10000, enableHighAccuracy: true};
 
- var brands = [];
+ var newSpots = [];
  
   $cordovaGeolocation.getCurrentPosition(options).then(function(position){
  
@@ -72,12 +72,12 @@ angular.module('starter', ['ionic', 'firebase', 'ngCordova'])
     $scope.map.addListener('click', function(event) {  
     addMarker(event.latLng);  
   }); 
-  function addMarker(location) {  
-  var brand = new google.maps.Marker({  
-    position: location,  
-    map: $scope.map  
-  });  
-  brands.push(brand);  
+      function addMarker(location) {  
+      var brandNew = new google.maps.Marker({  
+        position: location,  
+        map: $scope.map  
+    });  
+  newSpots.push(brandNew);  
 }   
   google.maps.event.addListenerOnce($scope.map, 'idle', function(){
  
