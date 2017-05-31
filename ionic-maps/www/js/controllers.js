@@ -51,7 +51,8 @@ $(document).ready(function() {
       //Add a realtime listner
       firebase.auth().onAuthStateChanged(firebaseUser => {
         if(firebaseUser) {
-          console.log(firebaseUser);
+          // console.log(firebaseUser);
+          window.location = '/#/map';
           btnLogout.classList.remove('hide');
         } else {
           console.log("not logged in");
