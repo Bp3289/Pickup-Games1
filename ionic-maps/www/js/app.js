@@ -75,14 +75,14 @@ angular.module('starter', ['ionic', 'firebase', 'ngCordova'])
       position: latLng
   }); 
 
-  var locations = new google.maps.Marker({
+  var basketball = new google.maps.Marker({
       map: $scope.map,
       animation: google.maps.Animation.DROP,
       position: {lat:39.760609, lng:-105.010492}
   }); 
 
   var baseball = new google.maps.Marker({
-    map: $scope.map,
+      map: $scope.map,
       animation: google.maps.Animation.DROP,
       position: {lat:39.762844, lng:-105.026676}
     });
@@ -91,14 +91,20 @@ angular.module('starter', ['ionic', 'firebase', 'ngCordova'])
       map: $scope.map,
       animation: google.maps.Animation.DROP,
       position: {lat:39.769609, lng:-105.004814}
-  })
+  });
+
+  var football = new google.maps.Marker({
+      map: $scope.map,
+      animation: google.maps.Animation.DROP,
+      position: {lat:39.772713, lng:-105.002863}
+  });
 
   var infoWindow = new google.maps.InfoWindow({
       content: "Here I am!"
   });
  
   google.maps.event.addListener(marker, 'click', function () {
-      infoWindow.open($scope.map, marker, locations, baseball, volleyball);
+      infoWindow.open($scope.map, marker, basketball, baseball, volleyball, football);
   });    
  
 });
