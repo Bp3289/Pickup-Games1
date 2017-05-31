@@ -69,16 +69,15 @@ angular.module('starter', ['ionic', 'firebase', 'ngCordova'])
     };
   $scope.map = new google.maps.Map(document.getElementById("map"), mapOptions);
     //Wait until the map is loaded
-    $scope.map.addListener('click', function(event) {  
-    addMarker(event.latLng);  
-  }); 
-      function addMarker(location) {  
-      var brandNew = new google.maps.Marker({  
-        position: location,  
-        map: $scope.map  
-    });  
-  newSpots.push(brandNew);  
-}   
+  //   $scope.map.addListener('click', function(event) {  
+  //   addMarker(event.latLng);  
+  // }); 
+  //     function addMarker(location) {  
+  //     var brandNew = new google.maps.Marker({  
+  //       position: location,  
+  //       map: $scope.map  
+  //   });  
+  // newSpots.push(brandNew);     
   google.maps.event.addListenerOnce($scope.map, 'idle', function(){
  
     var marker = new google.maps.Marker({
@@ -86,6 +85,17 @@ angular.module('starter', ['ionic', 'firebase', 'ngCordova'])
       animation: google.maps.Animation.DROP,
       position: latLng
   }); 
+
+    $scope.map.addListener('click', function(event) {  
+    addMarker(event.latLng);  
+  }); 
+      function addMarker(location) {  
+      var brandNew = new google.maps.Marker({  
+        position: location,  
+        map: $scope.map,  
+    });  
+  newSpots.push(brandNew);
+}
 
   var basketball = new google.maps.Marker({
       map: $scope.map,
@@ -165,9 +175,22 @@ angular.module('starter', ['ionic', 'firebase', 'ngCordova'])
                     '<div class="iw-bottom-gradient"></div>' +
                   '</div>'
   });
+
+  var brandNewWindow = new google.maps.InfoWindow({
+      content: '<div id="iw-container">' +
+                    '<div class="iw-title">Football</div>' +
+                    '<div class="iw-content">' +
+                      '<div class="iw-subTitle">4pm-7pm</div>' +
+                      '<div class="iw-id">Billy Wade</div>' +
+                      '<p>Looking to get a 7 on 7 game going, tackle only, non of that two hand touch crap!</p>' +
+                      '<div class="iw-subTitle">Contacts</div>' +
+                       '<div class="iw-contact">376-908-9071</div>' +
+                    '<div class="iw-bottom-gradient"></div>' +
+                  '</div>'
+  });
  
   google.maps.event.addListener(marker, 'click', function () {
-      infoWindow.open($scope.map, marker, basketball, baseball, volleyball);
+      infoWindow.open($scope.map, marker);
   }); 
 
   google.maps.event.addListener(basketball, 'click', function(){
@@ -184,6 +207,10 @@ angular.module('starter', ['ionic', 'firebase', 'ngCordova'])
 
   google.maps.event.addListener(football, 'click', function(){
     footballWindow.open($scope.map, football);
+  }); 
+
+  google.maps.event.addListener(brandNew, 'click', function(){
+    brandNewWindow.open($scope.map, brandNew);
   }); 
 });
 
