@@ -95,18 +95,7 @@ angular.module('starter', ['ionic', 'firebase', 'ngCordova'])
         map: $scope.map,  
     });  
   newSpots.push(brandNew);
-  var brandNewWindow = new google.maps.InfoWindow({
-      content: '<div id="iw-container">' +
-                    '<div class="iw-title">Basketball</div>' +
-                    '<div class="iw-content">' +
-                      '<div class="iw-subTitle">4pm-7pm</div>' +
-                      '<div class="iw-id">Billy Wade</div>' +
-                      '<p>Looking to get a 7 on 7 game going, tackle only, non of that two hand touch crap!</p>' +
-                      '<div class="iw-subTitle">Contacts</div>' +
-                       '<div class="iw-contact">376-908-9071</div>' +
-                    '<div class="iw-bottom-gradient"></div>' +
-                  '</div>'
-  });
+  
    google.maps.event.addListener(brandNew, 'click', function(){
     brandNewWindow.open($scope.map, brandNew);
   });
@@ -193,16 +182,18 @@ angular.module('starter', ['ionic', 'firebase', 'ngCordova'])
   });
 
   var brandNewWindow = new google.maps.InfoWindow({
-      content: '<div id="iw-container">' +
-                    '<div class="iw-title">Football</div>' +
-                    '<div class="iw-content">' +
-                      '<div class="iw-subTitle">4pm-7pm</div>' +
-                      '<div class="iw-id">Billy Wade</div>' +
-                      '<p>Looking to get a 7 on 7 game going, tackle only, non of that two hand touch crap!</p>' +
-                      '<div class="iw-subTitle">Contacts</div>' +
-                       '<div class="iw-contact">376-908-9071</div>' +
-                    '<div class="iw-bottom-gradient"></div>' +
-                  '</div>'
+      content: '<form>' +
+      'Type of sport:<br>'+
+      '<input type="text" name="sport">' +
+      'Time:<br>'+
+      '<input type="text" name="time">'+
+      'Name:'+
+      '<input type="text" name="name">'+
+      'Description:<br>'+
+      '<input type="text" name="description">'+
+      'Contact:<br>'+
+      '<input type="text" name="contact">'+
+      '</form>'
   });
  
   google.maps.event.addListener(marker, 'click', function () {
@@ -225,7 +216,7 @@ angular.module('starter', ['ionic', 'firebase', 'ngCordova'])
     footballWindow.open($scope.map, football);
   }); 
 
-  google.maps.event.addListener(brandNew, 'click', function(){
+  google.maps.event.addListener(newSpots, 'click', function(){
     brandNewWindow.open($scope.map, brandNew);
   }); 
 });
