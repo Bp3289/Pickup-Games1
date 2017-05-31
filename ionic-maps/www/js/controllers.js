@@ -1,6 +1,6 @@
-	"use strict";
+"use strict";
 
-	(function() {
+$(document).ready(function() {
       // Initialize Firebase
       const config = {
         apiKey: "AIzaSyCzGwU5GWPoqyvVVASHOd7B_YpnIH-38hM",
@@ -10,8 +10,12 @@
         storageBucket: "pickup-final.appspot.com",
         messagingSenderId: "769449152082"
       };
-      firebase.initializeApp(config);
+      if (!firebase.apps.length) {
+		    firebase.initializeApp(config);
+	  }
+      // firebase.initializeApp(config);
       var rootRef = firebase.database().ref();
+
 
       //Get Elements
       const txtEmail = document.getElementById('txtEmail');
@@ -28,7 +32,7 @@
         //Sign in 
         const promise = firebase.auth().signInWithEmailAndPassword(email, pass);
         promise.catch(e => console.log(e.message));
-      });
+      })
 
       btnSignUp.addEventListener('click', e => {
         const email = txtEmail.value;
@@ -54,4 +58,4 @@
           btnLogout.classList.add('hide');
         }
       });
-  }());
+});
