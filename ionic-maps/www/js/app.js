@@ -102,10 +102,18 @@ angular.module('starter', ['ionic', 'firebase', 'ngCordova'])
   var infoWindow = new google.maps.InfoWindow({
       content: "Here I am!"
   });
+
+  var footballWindow = new google.maps.InfoWindow({
+      content: "HEYEYYYYYYY"
+  });
  
   google.maps.event.addListener(marker, 'click', function () {
-      infoWindow.open($scope.map, marker, basketball, baseball, volleyball, football);
-  });    
+      infoWindow.open($scope.map, marker, basketball, baseball, volleyball);
+  }); 
+
+  google.maps.event.addListener(football, 'click', function(){
+    footballWindow.open($scope.map, football);
+  });   
  
 });
  
