@@ -95,6 +95,22 @@ angular.module('starter', ['ionic', 'firebase', 'ngCordova'])
         map: $scope.map,  
     });  
   newSpots.push(brandNew);
+  var brandNewWindow = new google.maps.InfoWindow({
+      content: '<div id="iw-container">' +
+                    '<div class="iw-title">Basketball</div>' +
+                    '<div class="iw-content">' +
+                      '<div class="iw-subTitle">4pm-7pm</div>' +
+                      '<div class="iw-id">Billy Wade</div>' +
+                      '<p>Looking to get a 7 on 7 game going, tackle only, non of that two hand touch crap!</p>' +
+                      '<div class="iw-subTitle">Contacts</div>' +
+                       '<div class="iw-contact">376-908-9071</div>' +
+                    '<div class="iw-bottom-gradient"></div>' +
+                  '</div>'
+  });
+   google.maps.event.addListener(brandNew, 'click', function(){
+    brandNewWindow.open($scope.map, brandNew);
+  });
+
 }
 
   var basketball = new google.maps.Marker({
