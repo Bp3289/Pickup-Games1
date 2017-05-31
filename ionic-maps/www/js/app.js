@@ -81,12 +81,18 @@ angular.module('starter', ['ionic', 'firebase', 'ngCordova'])
       position: {lat:39.760609, lng:-105.010492}
   }); 
 
+  var baseball = new google.maps.Marker({
+    map: $scope.map,
+      animation: google.maps.Animation.DROP,
+      position: {lat:39.762844, lng:-105.026676}
+    });
+
   var infoWindow = new google.maps.InfoWindow({
       content: "Here I am!"
   });
  
   google.maps.event.addListener(marker, 'click', function () {
-      infoWindow.open($scope.map, marker, locations);
+      infoWindow.open($scope.map, marker, locations, baseball);
   });    
  
 });
