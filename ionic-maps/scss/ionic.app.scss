@@ -31,9 +31,20 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 	height: 80%;
 }
 
-body {
-	color: blue;
+#backgoundcontainer {
+	background-color: #FFCC00;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
 }
+
+#contentcontainer {
+	z-index: 2;
+	position: relative;
+}
+
 
 h1, h3 {
 	text-align: center;
