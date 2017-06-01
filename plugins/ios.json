@@ -28,6 +28,9 @@
         "cordova-plugin-geolocation": {
             "GEOLOCATION_USAGE_DESCRIPTION": " ",
             "PACKAGE_NAME": "io.ionic.starter"
+        },
+        "ionic-plugin-deploy": {
+            "PACKAGE_NAME": "com.ionicframework.ionicmaps165235"
         }
     },
     "dependent_plugins": {
