@@ -137,6 +137,11 @@ angular.module('starter', ['ionic', 'firebase', 'ngCordova'])
                       '<div class="iw-subTitle">Billy Wade</div>' +
                       '<p>Looking to get a 7 on 7 game going, tackle only, non of that two hand touch crap!</p>' +
                        '<div class="iw-subTitle">376-908-9071</div>' +
+                       '<br>'+
+                       '<form class="compete">'+
+                       '<input type="checkbox" name="attend">Will you compete?<br>'+
+                       '<input type="submit" value="Submit">'+
+                       '</form>'+
                     '<div class="iw-bottom-gradient"></div>' +
                   '</div>'
   });
@@ -149,6 +154,11 @@ angular.module('starter', ['ionic', 'firebase', 'ngCordova'])
                       '<div class="iw-subTitle">Billy Wade</div>' +
                       '<p>Looking to get a 7 on 7 game going, tackle only, non of that two hand touch crap!</p>' +
                        '<div class="iw-subTitle">376-908-9071</div>' +
+                       '<br>'+
+                       '<form class="compete">'+
+                       '<input type="checkbox" name="attend">Will you compete?<br>'+
+                       '<input type="submit" value="Submit">'+
+                       '</form>'+
                     '<div class="iw-bottom-gradient"></div>' +
                   '</div>'
   });
@@ -161,6 +171,11 @@ angular.module('starter', ['ionic', 'firebase', 'ngCordova'])
                       '<div class="iw-subTitle">Billy Wade</div>' +
                       '<p>Looking to get a 7 on 7 game going, tackle only, non of that two hand touch crap!</p>' +
                        '<div class="iw-subTitle">376-908-9071</div>' +
+                       '<br>'+
+                       '<form class="compete">'+
+                       '<input type="checkbox" name="attend">Will you compete?<br>'+
+                       '<input type="submit" value="Submit">'+
+                       '</form>'+
                     '<div class="iw-bottom-gradient"></div>' +
                   '</div>'
   });
@@ -177,6 +192,11 @@ angular.module('starter', ['ionic', 'firebase', 'ngCordova'])
                       '<p>Looking to get a 7 on 7 game going, tackle only, none of that two hand touch crap!</p>' +
                       '<br>'+
                        '<div class="iw-subTitle">Contact: 376-908-9071</div>' +
+                       '<br>'+
+                       '<form class="compete">'+
+                       '<input type="checkbox" name="attend">Will you compete?<br>'+
+                       '<input type="submit" value="Submit">'+
+                       '</form>'+
                     '<div class="iw-bottom-gradient"></div>' +
                   '</div>'
   });
