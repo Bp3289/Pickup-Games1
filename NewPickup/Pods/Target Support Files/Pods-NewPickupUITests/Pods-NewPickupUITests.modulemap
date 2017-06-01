@@ -1,6 +1,0 @@
-framework module Pods_NewPickupUITests {
-  umbrella header "Pods-NewPickupUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -1,6 +1,0 @@
-framework module Pods_NewPickup {
-  umbrella header "Pods-NewPickup-umbrella.h"
-
-  export *
-  module * { export * }
-}
