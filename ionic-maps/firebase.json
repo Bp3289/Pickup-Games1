@@ -1,14 +1,12 @@
-
- "database": {
-   "rules": "database.rules.json"
- }
-
-
-
 {
- "rules": {
-   ".read": true,
-   ".write": true
- }
+  "rules": {
+    ".read": true,
+    ".write": true
+  },
+  "database": {
+    "rules": {
+      ".read": true,
+      ".write": true
+    }
+  }
 }
-
