@@ -9839,28 +9839,51 @@ a.button {
 
 h1, h3 {
   text-align: center;
-  margin-top: 100px;
   font-family: 'Pacifico', cursive;
   font-size: 50px;
-  color: red; }
+  color: red;
+  margin-top: 200px; }
 
 .container {
   text-align: center;
-  margin-top: 100px; }
+  margin-top: 300px; }
 
 #txtEmail, #txtPassword {
   margin: 0 auto; }
 
-#iw-container .iw-title {
+#iw-container .iw-football .iw-baseball .iw-volley .iw-basketball {
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 22px;
-  font-weight: 400;
+  font-weight: bold;
   padding: 10px;
-  background-color: #48b5e9;
   color: white;
   margin: 1px;
   border-radius: 2px 2px 0 0;
   /* In accordance with the rounding of the default infowindow corners. */ }
+
+.iw-football {
+  background-color: green;
+  font-size: 36px; }
+
+.iw-baseball {
+  background-color: blue;
+  font-size: 36px; }
+
+.iw-volley {
+  background-color: #800080;
+  font-size: 36px; }
+
+.iw-basketball {
+  background-color: #FFA500;
+  font-size: 36px; }
+
+.iw-subTitle {
+  margin-left: 90px;
+  font-size: 24px; }
+
+p {
+  font-size: 18px;
+  margin-left: 90px; }
 
 .gm-style-iw {
   width: 350px !important;

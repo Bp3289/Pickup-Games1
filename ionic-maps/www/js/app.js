@@ -131,52 +131,52 @@ angular.module('starter', ['ionic', 'firebase', 'ngCordova'])
   });
   var basketballWindow = new google.maps.InfoWindow({
       content: '<div id="iw-container">' +
-                    '<div class="iw-title">Basketball</div>' +
+                    '<div class="iw-basketball">Basketball</div>' +
                     '<div class="iw-content">' +
                       '<div class="iw-subTitle">4pm-7pm</div>' +
-                      '<div class="iw-id">Billy Wade</div>' +
+                      '<div class="iw-subTitle">Billy Wade</div>' +
                       '<p>Looking to get a 7 on 7 game going, tackle only, non of that two hand touch crap!</p>' +
-                      '<div class="iw-subTitle">Contacts</div>' +
-                       '<div class="iw-contact">376-908-9071</div>' +
+                       '<div class="iw-subTitle">376-908-9071</div>' +
                     '<div class="iw-bottom-gradient"></div>' +
                   '</div>'
   });
 
   var baseballWindow = new google.maps.InfoWindow({
       content: '<div id="iw-container">' +
-                    '<div class="iw-title">Baseball</div>' +
+                    '<div class="iw-baseball">Baseball</div>' +
                     '<div class="iw-content">' +
                       '<div class="iw-subTitle">4pm-7pm</div>' +
-                      '<div class="iw-id">Billy Wade</div>' +
+                      '<div class="iw-subTitle">Billy Wade</div>' +
                       '<p>Looking to get a 7 on 7 game going, tackle only, non of that two hand touch crap!</p>' +
-                      '<div class="iw-subTitle">Contacts</div>' +
-                       '<div class="iw-contact">376-908-9071</div>' +
+                       '<div class="iw-subTitle">376-908-9071</div>' +
                     '<div class="iw-bottom-gradient"></div>' +
                   '</div>'
   });
 
   var volleyWindow = new google.maps.InfoWindow({
       content: '<div id="iw-container">' +
-                    '<div class="iw-title">Volleyball</div>' +
+                    '<div class="iw-volley">Volleyball</div>' +
                     '<div class="iw-content">' +
                       '<div class="iw-subTitle">4pm-7pm</div>' +
-                      '<div class="iw-id">Billy Wade</div>' +
+                      '<div class="iw-subTitle">Billy Wade</div>' +
                       '<p>Looking to get a 7 on 7 game going, tackle only, non of that two hand touch crap!</p>' +
-                      '<div class="iw-subTitle">Contacts</div>' +
-                       '<div class="iw-contact">376-908-9071</div>' +
+                       '<div class="iw-subTitle">376-908-9071</div>' +
                     '<div class="iw-bottom-gradient"></div>' +
                   '</div>'
   });
 
   var footballWindow = new google.maps.InfoWindow({
       content: '<div id="iw-container">' +
-                    '<div class="iw-title">Football</div>' +
+                    '<div class="iw-football">Football</div>' +
+                    '<br>'+
                     '<div class="iw-content">' +
-                      '<div class="iw-subTitle">4pm-7pm</div>' +
-                      '<div class="iw-id">Billy Wade</div>' +
-                      '<p>Looking to get a 7 on 7 game going, tackle only, non of that two hand touch crap!</p>' +
-                      '<div class="iw-subTitle">Contacts</div>' +
-                       '<div class="iw-contact">376-908-9071</div>' +
+                      '<div class="iw-subTitle">Time: 4pm-7pm</div>' +
+                      '<br>'+
+                      '<div class="iw-subTitle">Billy Wade</div>' +
+                      '<br>'+
+                      '<p>Looking to get a 7 on 7 game going, tackle only, none of that two hand touch crap!</p>' +
+                      '<br>'+
+                       '<div class="iw-subTitle">Contact: 376-908-9071</div>' +
                     '<div class="iw-bottom-gradient"></div>' +
                   '</div>'
   });

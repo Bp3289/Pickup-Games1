@@ -53,7 +53,7 @@ $(document).ready(function() {
         if(firebaseUser) {
           // console.log(firebaseUser);
           btnLogout.classList.remove('hide');
-          // window.location = '/#/map';
+          window.location = '/#/map';
         } else {
           console.log("not logged in");
           btnLogout.classList.add('hide');
