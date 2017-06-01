@@ -52,8 +52,8 @@ $(document).ready(function() {
       firebase.auth().onAuthStateChanged(firebaseUser => {
         if(firebaseUser) {
           // console.log(firebaseUser);
-          window.location = '/#/map';
           btnLogout.classList.remove('hide');
+          // window.location = '/#/map';
         } else {
           console.log("not logged in");
           btnLogout.classList.add('hide');

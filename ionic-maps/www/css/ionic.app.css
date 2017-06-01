@@ -9823,12 +9823,15 @@ a.button {
   height: 80%; }
 
 #backgoundcontainer {
-  background-color: #FFCC00;
+  background-image: url("https://ak5.picdn.net/shutterstock/videos/473089/thumb/1.jpg");
   position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh; }
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
 
 #contentcontainer {
   z-index: 2;
