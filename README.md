@@ -28,3 +28,7 @@ Saving new marker to Firebase
 
 
 ## Futute Development 
+
+Custom Markers
+
+Push notifications
