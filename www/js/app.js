@@ -84,7 +84,11 @@ angular.module('starter', ['ionic', 'firebase', 'ngCordova'])
     var marker = new google.maps.Marker({
       map: $scope.map,
       animation: google.maps.Animation.DROP,
-      position: latLng
+      position: latLng,
+      icon: {
+        url:"img/user-icon.png",
+        scaledSize: new google.maps.Size(40, 40)
+      }
   }); 
 
     $scope.map.addListener('click', function(event) {  
