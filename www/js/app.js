@@ -53,6 +53,16 @@ angular.module('starter', ['ionic', 'firebase', 'ngCordova'])
 
 })
 
+// .controller('SearchCtrl', function($scope, $state){
+//   $scope.data = {};
+
+//   $scope.countryCode = 'US';
+
+//   $scope.onAddressSelection = function(location){
+//     var a = location.address_components;
+//   };
+// })
+
 .controller('MapCtrl', function($scope, $state, $cordovaGeolocation) {
  var options = {timeout: 10000, enableHighAccuracy: true};
 
@@ -68,16 +78,7 @@ angular.module('starter', ['ionic', 'firebase', 'ngCordova'])
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
   $scope.map = new google.maps.Map(document.getElementById("map"), mapOptions);
-    //Wait until the map is loaded
-  //   $scope.map.addListener('click', function(event) {  
-  //   addMarker(event.latLng);  
-  // }); 
-  //     function addMarker(location) {  
-  //     var brandNew = new google.maps.Marker({  
-  //       position: location,  
-  //       map: $scope.map  
-  //   });  
-  // newSpots.push(brandNew);     
+      
   google.maps.event.addListenerOnce($scope.map, 'idle', function(){
  
     var marker = new google.maps.Marker({
@@ -105,7 +106,11 @@ angular.module('starter', ['ionic', 'firebase', 'ngCordova'])
   var basketball = new google.maps.Marker({
       map: $scope.map,
       animation: google.maps.Animation.DROP,
-      position: {lat:39.760609, lng:-105.010492}
+      position: {lat:39.760609, lng:-105.010492},
+      icon: {
+        url: "img/BasketBall.png",
+        scaledSize: new google.maps.Size(40, 40)
+      }
   }); 
 
   var baseball = new google.maps.Marker({
@@ -132,14 +137,18 @@ angular.module('starter', ['ionic', 'firebase', 'ngCordova'])
   var basketballWindow = new google.maps.InfoWindow({
       content: '<div id="iw-container">' +
                     '<div class="iw-basketball">Basketball</div>' +
+                    '<br>'+
                     '<div class="iw-content">' +
-                      '<div class="iw-subTitle">4pm-7pm</div>' +
-                      '<div class="iw-subTitle">Billy Wade</div>' +
-                      '<p>Looking to get a 7 on 7 game going, tackle only, non of that two hand touch crap!</p>' +
-                       '<div class="iw-subTitle">376-908-9071</div>' +
+                      '<div class="iw-subTitle">Time: 4pm-7pm</div>' +
+                      '<br>'+
+                      '<div class="iw-subTitle">Name: Billy Wade</div>' +
+                      '<br>'+
+                      '<p>Description: Looking to get a 7 on 7 game going, tackle only, non of that two hand touch crap!</p>' +
+                       '<div class="iw-subTitle">Contact: 376-908-9071</div>' +
                        '<br>'+
                        '<form class="compete">'+
-                       '<input type="checkbox" name="attend">Will you compete?<br>'+
+                       '<input type="checkbox" class="attend"> Will you compete?<br>'+
+                       '<br>'+
                        '<input type="submit" value="Submit">'+
                        '</form>'+
                     '<div class="iw-bottom-gradient"></div>' +
@@ -149,14 +158,18 @@ angular.module('starter', ['ionic', 'firebase', 'ngCordova'])
   var baseballWindow = new google.maps.InfoWindow({
       content: '<div id="iw-container">' +
                     '<div class="iw-baseball">Baseball</div>' +
+                    '<br>'+
                     '<div class="iw-content">' +
-                      '<div class="iw-subTitle">4pm-7pm</div>' +
-                      '<div class="iw-subTitle">Billy Wade</div>' +
-                      '<p>Looking to get a 7 on 7 game going, tackle only, non of that two hand touch crap!</p>' +
-                       '<div class="iw-subTitle">376-908-9071</div>' +
+                      '<div class="iw-subTitle">Time: 4pm-7pm</div>' +
+                      '<br>'+
+                      '<div class="iw-subTitle">Name: Billy Wade</div>' +
+                      '<br>'+
+                      '<p>Description: Looking to get a 7 on 7 game going, tackle only, non of that two hand touch crap!</p>' +
+                       '<div class="iw-subTitle">Contact: 376-908-9071</div>' +
                        '<br>'+
                        '<form class="compete">'+
-                       '<input type="checkbox" name="attend">Will you compete?<br>'+
+                       '<input type="checkbox" class="attend"> Will you compete?<br>'+
+                       '<br>'+
                        '<input type="submit" value="Submit">'+
                        '</form>'+
                     '<div class="iw-bottom-gradient"></div>' +
@@ -166,14 +179,18 @@ angular.module('starter', ['ionic', 'firebase', 'ngCordova'])
   var volleyWindow = new google.maps.InfoWindow({
       content: '<div id="iw-container">' +
                     '<div class="iw-volley">Volleyball</div>' +
+                    '<br>'+
                     '<div class="iw-content">' +
-                      '<div class="iw-subTitle">4pm-7pm</div>' +
-                      '<div class="iw-subTitle">Billy Wade</div>' +
-                      '<p>Looking to get a 7 on 7 game going, tackle only, non of that two hand touch crap!</p>' +
-                       '<div class="iw-subTitle">376-908-9071</div>' +
+                      '<div class="iw-subTitle">Time: 4pm-7pm</div>' +
+                      '<br>'+
+                      '<div class="iw-subTitle">Name: Billy Wade</div>' +
+                      '<br>'+
+                      '<p>Description: Looking to get a 7 on 7 game going, tackle only, non of that two hand touch crap!</p>' +
+                       '<div class="iw-subTitle">Contact: 376-908-9071</div>' +
                        '<br>'+
                        '<form class="compete">'+
-                       '<input type="checkbox" name="attend">Will you compete?<br>'+
+                       '<input type="checkbox" class="attend"> Will you compete?<br>'+
+                       '<br>'+
                        '<input type="submit" value="Submit">'+
                        '</form>'+
                     '<div class="iw-bottom-gradient"></div>' +
@@ -194,7 +211,8 @@ angular.module('starter', ['ionic', 'firebase', 'ngCordova'])
                        '<div class="iw-subTitle">Contact: 376-908-9071</div>' +
                        '<br>'+
                        '<form class="compete">'+
-                       '<input type="checkbox" name="attend">Will you compete?<br>'+
+                       '<input type="checkbox" class="attend"> Will you compete?<br>'+
+                       '<br>'+
                        '<input type="submit" value="Submit">'+
                        '</form>'+
                     '<div class="iw-bottom-gradient"></div>' +
@@ -204,15 +222,16 @@ angular.module('starter', ['ionic', 'firebase', 'ngCordova'])
   var brandNewWindow = new google.maps.InfoWindow({
       content: '<form>' +
       'Type of sport:<br>'+
-      '<input type="text" name="sport">' +
+      '<input type="text" class="sport">' +
       'Time:<br>'+
-      '<input type="text" name="time">'+
+      '<input type="text" class="sport">'+
       'Name:'+
-      '<input type="text" name="name">'+
+      '<input type="text" class="sport">'+
       'Description:<br>'+
-      '<input type="text" name="description">'+
+      '<input type="text" class="sport">'+
       'Contact:<br>'+
       '<input type="text" name="contact">'+
+      '<input type="submit" value="Submit">'+
       '</form>'
   });
  

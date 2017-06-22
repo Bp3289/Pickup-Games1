@@ -9856,7 +9856,9 @@ a.button {
   margin-top: 60px; }
 
 #txtEmail, #txtPassword {
-  margin: 0 auto; }
+  margin: 0 auto;
+  width: 250px;
+  height: 50px; }
 
 #iw-container .iw-football .iw-baseball .iw-volley .iw-basketball {
   font-family: 'Open Sans Condensed', sans-serif;
@@ -9895,6 +9897,31 @@ p {
 .compete {
   margin-left: 90px;
   font-size: 20px; }
+
+.attend {
+  width: 20px;
+  height: 20px; }
+
+form {
+  font-size: 12px;
+  font-weight: bold; }
+
+input[type=text] {
+  width: 100%;
+  /* Full width */
+  padding: 12px;
+  /* Some padding */
+  border: 1px solid #ccc;
+  /* Gray border */
+  border-radius: 4px;
+  /* Rounded borders */
+  box-sizing: border-box;
+  /* Make sure that padding and width stays in place */
+  margin-top: 6px;
+  /* Add a top margin */
+  margin-bottom: 16px;
+  /* Bottom margin */
+  resize: vertical; }
 
 .gm-style-iw {
   width: 350px !important;

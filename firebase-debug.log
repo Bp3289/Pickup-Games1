@@ -1,0 +1,34 @@
+[debug] ----------------------------------------------------------------------
+[debug] Command:      /usr/local/Cellar/node/7.7.1_1/bin/node /usr/local/bin/firebase serve
+[debug] CLI Version:  3.9.0
+[debug] Platform:     darwin
+[debug] Node Version: v7.7.1
+[debug] Time:         Thu Jun 01 2017 12:43:32 GMT-0600 (MDT)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[debug] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/pickup-final  
+ Thu Jun 01 2017 12:43:32 GMT-0600 (MDT)
+[debug] <<< HTTP RESPONSE 200
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/pickup-final/tokens  
+ Thu Jun 01 2017 12:43:33 GMT-0600 (MDT)
+[debug] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/billy/General-Assembly/Pickup-Games1'...
+[info] 
+[debug] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/pickup-final  
+ Thu Jun 01 2017 12:43:33 GMT-0600 (MDT)
+[debug] <<< HTTP RESPONSE 200
+[debug] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/769449152082/clients/_:getWebAppConfig  
+ Thu Jun 01 2017 12:43:33 GMT-0600 (MDT)
+[debug] <<< HTTP RESPONSE 200
+[debug] TypeError: Cannot read property 'public' of undefined
+    at Server.<anonymous> (/usr/local/lib/node_modules/firebase-tools/lib/serve/hosting.js:34:17)
+    at Object.onceWrapper (events.js:293:19)
+    at emitNone (events.js:86:13)
+    at Server.emit (events.js:188:7)
+    at emitListeningNT (net.js:1290:10)
+    at _combinedTickCallback (internal/process/next_tick.js:77:11)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+[error] 
+[error] Error: An unexpected error has occurred.

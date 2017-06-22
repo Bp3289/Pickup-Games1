@@ -1,4 +1,9 @@
-{
+{ "scripts":
+    {"start": "ionic serve --address localhost"},
+}
+    
+
+
     "name": "ionic-maps",
     "version": "1.1.1",
     "description": "ionic-maps: An Ionic project",
