@@ -128,7 +128,11 @@ angular.module('starter', ['ionic', 'firebase', 'ngCordova'])
   var football = new google.maps.Marker({
       map: $scope.map,
       animation: google.maps.Animation.DROP,
-      position: {lat:39.772713, lng:-105.002863}
+      position: {lat:39.772713, lng:-105.002863},
+      icon: {
+        url: "img/Football-icon.png",
+        scaledSize: new google.maps.Size(40, 40)
+      }
   });
 
   var infoWindow = new google.maps.InfoWindow({
