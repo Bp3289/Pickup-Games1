@@ -116,13 +116,21 @@ angular.module('starter', ['ionic', 'firebase', 'ngCordova'])
   var baseball = new google.maps.Marker({
       map: $scope.map,
       animation: google.maps.Animation.DROP,
-      position: {lat:39.762844, lng:-105.026676}
+      position: {lat:39.762844, lng:-105.026676},
+      icon: {
+        url:"img/baseball-icon.png",
+        scaledSize: new google.maps.Size(40, 40)
+      }
     });
 
   var volleyball = new google.maps.Marker({
       map: $scope.map,
       animation: google.maps.Animation.DROP,
-      position: {lat:39.769609, lng:-105.004814}
+      position: {lat:39.769609, lng:-105.004814},
+      icon: {
+        url: "img/volleyball-icon.png",
+        scaledSize: new google.maps.Size(40, 40)
+      }
   });
 
   var football = new google.maps.Marker({
